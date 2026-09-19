@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AQUA SAVIOUR — IoT based sustainable water management and energy conservation system developed by Civil Engineering students.">
+<meta name="theme-color" content="#06364a">
+<title>AQUA SAVIOUR | Smart Water Management</title>
+<style>
+:root{--navy:#06364a;--blue:#087ea4;--cyan:#13b8c8;--green:#2eb67d;--bg:#f7fcfd;--light:#eaf8fa;--text:#173746;--muted:#64808d;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.65}
+nav{position:fixed;inset:0 0 auto;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid #dceff3}
+.navin{max-width:1200px;margin:auto;padding:15px 24px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:900;font-size:1.3rem;color:var(--navy)}.logo span{color:var(--cyan)}
+nav ul{display:flex;gap:22px;list-style:none}nav a{color:var(--text);text-decoration:none;font-weight:700;font-size:.9rem}nav a:hover{color:var(--blue)}
+.menu{display:none;border:0;background:transparent;font-size:1.7rem;color:var(--navy)}
+.hero{min-height:100vh;padding:145px 24px 80px;display:grid;grid-template-columns:1.08fr .92fr;gap:55px;align-items:center;background:radial-gradient(circle at 82% 18%,#d5f7fa,transparent 31%),linear-gradient(135deg,#f7feff,#e9f8fb)}
+.wrap{width:min(1200px,100%);margin:auto}.badge{display:inline-block;background:#d9f5f7;color:var(--blue);padding:7px 14px;border-radius:30px;font-weight:800;font-size:.82rem;margin-bottom:18px}
+h1{font-size:clamp(3.1rem,7vw,6rem);line-height:.96;color:var(--navy);margin-bottom:18px}h1 span{color:var(--cyan)}.hero h2{font-size:clamp(1.15rem,2.2vw,1.5rem);color:#38606e;margin-bottom:18px;max-width:720px}.hero p{max-width:700px;color:var(--muted);font-size:1.08rem}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-block;padding:13px 21px;border-radius:10px;text-decoration:none;font-weight:800}.primary{background:var(--blue);color:white}.secondary{border:1.5px solid #9ad8df;color:var(--navy);background:white}
+.dashboard{background:white;border:1px solid #cdebef;border-radius:24px;padding:22px;box-shadow:0 25px 70px rgba(8,126,164,.16)}.dashhead{display:flex;justify-content:space-between;margin-bottom:17px}.live{color:#16885e;font-weight:800;font-size:.82rem}.dot{display:inline-block;width:8px;height:8px;background:var(--green);border-radius:50%;margin-right:5px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini{padding:18px;border-radius:15px;background:var(--light)}.mini small{color:var(--muted)}.value{font-size:1.65rem;font-weight:900;color:var(--navy)}.bar{height:9px;background:#d6edf0;border-radius:9px;margin-top:9px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--cyan),var(--blue));border-radius:9px}
+section{padding:88px 24px}.problem{background:white}.title{text-align:center;max-width:800px;margin:0 auto 42px}.title h2{font-size:clamp(2rem,4vw,2.7rem);color:var(--navy);margin-bottom:9px}.title p{color:var(--muted)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card,.feature{background:#fff;border:1px solid #d8edf0;border-radius:18px;padding:24px}.problem .card{background:#f7fcfd}.icon{font-size:2rem;margin-bottom:10px}.card h3{color:var(--navy);margin-bottom:7px}.card p,.feature{color:var(--muted)}.feature strong{display:block;color:var(--blue);font-size:1.08rem;margin-bottom:7px}
+.arch{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:12px;align-items:center;max-width:1050px;margin:20px auto}.node{background:white;border:1px solid #bfe5ea;border-radius:16px;padding:20px;text-align:center;box-shadow:0 8px 25px rgba(8,126,164,.07)}.node b{display:block;color:var(--navy)}.arrow{font-size:1.6rem;color:var(--cyan)}
+.process{background:var(--light)}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.step{background:white;padding:24px;border-radius:17px;border:1px solid #d8edf0}.num{font-size:1.8rem;font-weight:900;color:var(--cyan)}
+.impact{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff}.impact .title h2,.impact .title p{color:white}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.stat{text-align:center;padding:25px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.1);border-radius:17px}.stat b{display:block;font-size:2.2rem}
+.team{display:grid;grid-template-columns:repeat(5,1fr);gap:15px}.member{background:white;padding:22px;text-align:center;border-radius:15px;box-shadow:0 8px 25px rgba(20,59,75,.06)}.member-photo{width:92px;height:92px;object-fit:cover;border-radius:50%;margin-bottom:10px;border:3px solid var(--blue)}.member p{color:var(--muted)}
+.guide{margin:45px auto 0;max-width:720px;background:white;padding:30px;text-align:center;border-radius:18px;box-shadow:0 8px 25px rgba(20,59,75,.08)}.guide h2{color:var(--navy)}.guide h3{color:var(--blue)}.guide p{color:var(--muted)}
+footer{background:#042a39;color:#b8d5dc;text-align:center;padding:30px 24px}footer strong{color:white}
+@media(max-width:950px){nav ul{display:none}.menu{display:block}.hero{grid-template-columns:1fr}.grid4,.steps{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr 1fr}.team{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:1fr 1fr}.arch{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}}
+@media(max-width:600px){.navin{padding:13px 16px}section{padding:65px 16px}.hero{padding:125px 16px 60px}.grid4,.grid3,.steps,.stats,.cards,.team{grid-template-columns:1fr}.dashboard{padding:16px}.btn{width:100%;text-align:center}}
+</style>
+</head>
+<body>
+<nav><div class="navin"><div class="logo">AQUA <span>SAVIOUR</span></div><button class="menu" aria-label="Open menu" onclick="toggleMenu()">☰</button><ul id="navlinks"><li><a href="#problem">Problem</a></li><li><a href="#solution">Solution</a></li><li><a href="#technical">Technology</a></li><li><a href="#process">Process</a></li><li><a href="#prototype">Prototype Video</a></li><li><a href="#team">Team</a></li><li><a href="#impact">Impact</a></li></ul></div></nav>
+
+<header class="hero"><div class="wrap"><div class="badge">IoT • Sustainability • Civil Engineering</div><h1>AQUA <span>SAVIOUR</span></h1><h2>An IoT Based Sustainable Water Management and Energy Conservation System</h2><p>Monitor water usage, detect leakage, track water conditions, reduce unnecessary pumping and convert real-time data into smarter conservation decisions.</p><div class="buttons"><a class="btn primary" href="#solution">Explore Solution</a><a class="btn secondary" href="#technical">How It Works</a></div></div>
+<div class="dashboard"><div class="dashhead"><b>Smart Water Dashboard</b><span class="live"><i class="dot"></i>LIVE DEMO</span></div><div class="cards"><div class="mini"><small>Water Usage</small><div class="value">1,248 L</div><div class="bar"><i style="width:68%"></i></div></div><div class="mini"><small>Leakage Risk</small><div class="value">Low</div><div class="bar"><i style="width:24%"></i></div></div><div class="mini"><small>Tank Level</small><div class="value">82%</div><div class="bar"><i style="width:82%"></i></div></div><div class="mini"><small>Energy Saved</small><div class="value">14.6 kWh</div><div class="bar"><i style="width:73%"></i></div></div></div></div></header>
+
+<section id="problem" class="problem"><div class="wrap"><div class="title"><h2>The Hidden Cost of Water Wastage</h2><p>Traditional systems can miss problems until valuable water and energy have already been wasted.</p></div><div class="grid4">
+<div class="card"><div class="icon">💧</div><h3>Undetected Leakage</h3><p>Continuous leaks can remain unnoticed and increase water loss.</p></div><div class="card"><div class="icon">📊</div><h3>Delayed Monitoring</h3><p>Manual readings make it difficult to understand usage in real time.</p></div><div class="card"><div class="icon">🧪</div><h3>Quality Uncertainty</h3><p>Changes in water conditions may not be identified quickly.</p></div><div class="card"><div class="icon">⚡</div><h3>Energy Wastage</h3><p>Unnecessary pumping and treatment can consume additional energy.</p></div></div></div></section>
+
+<section id="solution"><div class="wrap"><div class="title"><h2>One Smart System. Multiple Benefits.</h2><p>AQUA SAVIOUR connects sensing, analytics and automated control into one conservation platform.</p></div><div class="grid3">
+<div class="feature"><strong>💧 Real-Time Water Monitoring</strong>Measure flow, consumption and tank levels continuously.</div><div class="feature"><strong>🚨 Leakage Detection</strong>Identify abnormal flow patterns and generate alerts.</div><div class="feature"><strong>🧪 Water Quality Tracking</strong>Monitor selected parameters and flag unusual readings.</div><div class="feature"><strong>⚡ Energy Optimization</strong>Support efficient pump operation based on actual demand.</div><div class="feature"><strong>📱 Smart Dashboard</strong>View live data, trends, alerts and conservation insights.</div><div class="feature"><strong>🤖 Automated Response</strong>Enable configured pumps, valves or other actuators to respond to defined conditions.</div></div></div></section>
+
+<section id="technical" class="problem"><div class="wrap"><div class="title"><h2>Technical Approach</h2><p>A practical IoT architecture connecting field sensing with monitoring, analytics and automated control.</p></div><div class="grid3">
+<div class="feature"><strong>01 • Sensing Layer</strong>Flow, water-level and quality sensors collect field data from tanks, pipelines and water systems.</div><div class="feature"><strong>02 • Controller Layer</strong>An ESP32 or suitable microcontroller processes readings and controls connected devices.</div><div class="feature"><strong>03 • Communication Layer</strong>Wi-Fi or another suitable IoT method transfers readings to the monitoring platform.</div><div class="feature"><strong>04 • Cloud & Data Layer</strong>Sensor data is stored and converted into trends, records and system status.</div><div class="feature"><strong>05 • Intelligence Layer</strong>Thresholds and usage patterns help identify abnormal flow, leakage and overflow risk.</div><div class="feature"><strong>06 • Control & Alert Layer</strong>Users receive alerts and configured pumps or valves can respond automatically.</div></div>
+<div class="arch"><div class="node">💧<b>Sensors</b><small>Collect</small></div><div class="arrow">→</div><div class="node">🔧<b>ESP32 / Controller</b><small>Process</small></div><div class="arrow">→</div><div class="node">☁️<b>IoT Platform</b><small>Store</small></div></div>
+<div class="arch"><div class="node">📈<b>Analytics</b><small>Understand</small></div><div class="arrow">→</div><div class="node">🚨<b>Alerts</b><small>Notify</small></div><div class="arrow">→</div><div class="node">⚙️<b>Pumps / Valves</b><small>Act</small></div></div></div></section>
+
+<section id="process" class="process"><div class="wrap"><div class="title"><h2>Project Implementation Process</h2><p>From identifying the problem to using data for conservation.</p></div><div class="steps"><div class="step"><div class="num">01</div><h3>Define the Need</h3><p>Identify water sources, consumption points, leakage risks and energy-intensive operations.</p></div><div class="step"><div class="num">02</div><h3>Build the Prototype</h3><p>Connect sensors and actuators to the IoT controller and verify readings.</p></div><div class="step"><div class="num">03</div><h3>Monitor & Analyze</h3><p>Display live values, historical trends and abnormal conditions on a dashboard.</p></div><div class="step"><div class="num">04</div><h3>Optimize</h3><p>Use collected data to reduce water waste, prevent overflow and improve pump operation.</p></div></div></div></section>
+
+<section><div class="wrap"><div class="title"><h2>How AQUA SAVIOUR Works</h2><p>Physical sensing → secure data → intelligent analysis → action → conservation.</p></div><div class="arch"><div class="node">📡<b>IoT Sensors</b><small>Flow • Level • Quality</small></div><div class="arrow">→</div><div class="node">☁️<b>Data Gateway</b><small>Transmission</small></div><div class="arrow">→</div><div class="node">🧠<b>Analytics</b><small>Patterns • Alerts</small></div></div><div class="arch"><div class="node">⚙️<b>Smart Control</b><small>Pumps • Valves</small></div><div class="arrow">→</div><div class="node">📱<b>Dashboard</b><small>Live monitoring</small></div><div class="arrow">→</div><div class="node">🌱<b>Conservation</b><small>Water + Energy</small></div></div></div></section>
+
+<section id="prototype" class="problem">
+  <div class="wrap">
+    <div class="title">
+      <h2>Working Prototype Video</h2>
+      <p>See AQUA SAVIOUR in operation through our working prototype demonstration.</p>
+    </div>
+    <div style="max-width:950px; margin:auto; background:#fff; border:1px solid #d8edf0; border-radius:20px; padding:14px; box-shadow:0 15px 45px rgba(8,126,164,.10)">
+      <video controls playsinline preload="metadata" style="display:block; width:100%; height:auto; max-height:540px; border-radius:14px; background:#042a39;">
+        <!-- The source is now updated to your new WhatsApp video file -->
+        <source src="PROTOTYPE.mp4 type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="problem"><div class="wrap"><div class="title"><h2>Our Team</h2><p>Department of Civil Engineering · Buddha Institute of Technology</p></div><div class="team">
+<div class="member"><img src="assets/kishan.jpeg" alt="Kishan Nigam" class="member-photo"><h3>Kishan Nigam</h3><p>Team Leader</p></div><div class="member"><img src="assets/mridul.png" alt="Mridul Chaudhary" class="member-photo"><h3>Mridul Chaudhary</h3><p>Team Member</p></div><div class="member"><img src="assets/aman.jpeg" alt="Aman Kumar Gupta" class="member-photo"><h3>Aman Kumar Gupta</h3><p>Team Member</p></div><div class="member"><img src="assets/abhishek.png" alt="Abhishek Raj" class="member-photo"><h3>Abhishek Raj</h3><p>Team Member</p></div><div class="member"><img src="assets/vartika.jpeg" alt="Vartika Upadhyay" class="member-photo"><h3>Vartika Upadhyay</h3><p>Team Member</p></div></div><div class="member"><img src="assets/riya.png" alt="Riya" class="member-photo"><h3>Riya</h3><p>Team Member</p></div>
+<div class="guide"><div class="icon">👨‍🏫</div><h2>Project Guide</h2><h3>Mr. Pratish Kannaujiya</h3><p>Assistant Professor, Civil Engineering<br>Manager, Buddha Innovation Council</p><br><p>Under his valuable guidance and support, our team developed the <strong>AQUA SAVIOUR</strong> IoT-based sustainable water management and energy conservation system.</p></div></div></section>
+
+<section class="impact" id="impact"><div class="wrap"><div class="title"><h2>Expected Impact</h2><p>Turning real-time monitoring into measurable conservation decisions.</p></div><div class="stats"><div class="stat"><b>24/7</b><span>Water Monitoring</span></div><div class="stat"><b>↓</b><span>Leakage & Overflow Risk</span></div><div class="stat"><b>⚡</b><span>Energy-Aware Pumping</span></div><div class="stat"><b>🌱</b><span>Sustainable Water Use</span></div></div></div></section>
+
+<footer><strong>AQUA SAVIOUR</strong> — Smart Water Management for a Sustainable Future.<br><small>IoT Based Sustainable Water Management & Energy Conservation System</small></footer>
+<script>
+function toggleMenu(){const u=document.getElementById('navlinks');u.style.display=u.style.display==='flex'?'none':'flex';u.style.flexDirection='column';u.style.position='absolute';u.style.top='58px';u.style.right='16px';u.style.background='white';u.style.padding='18px';u.style.border='1px solid #dceff3';u.style.borderRadius='12px';u.style.boxShadow='0 12px 30px rgba(0,0,0,.1)'}
+document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',()=>{if(innerWidth<=950)document.getElementById('navlinks').style.display='none'}));
+</script>
+</body>
+</html>
